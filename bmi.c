@@ -1,12 +1,25 @@
 #include <stdio.h>
 
+//https://github.com/aguevara7/Info1-2025.git
+
 int main(void) {
 	float peso, altura, imc;
 	
 	printf ("Ingrese su peso en kg:");
 	scanf ("%f",&peso);
+	
+	while (peso<=0) {
+		printf ("Error. Ingrese nuevamente el peso:");
+		scanf ("%f", &peso);
+	}
+	
 	printf ("Ingrese su altura en m:");
 	scanf ("%f",&altura);
+
+	while (altura<=0) {
+		printf ("Error. Ingrese nuevamente la altura:");
+		scanf ("%f", &altura);
+	}
 	
 	imc = peso/(altura*altura);
 	printf ("Su indice es: %.2f\n", imc);
